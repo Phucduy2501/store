@@ -1,0 +1,282 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed; /* Sidebar remains fixed while scrolling */
+  height: 100vh; /* Ensure full-height sidebar */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.user-info h3 {
+  margin-bottom: 5px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  gap: 10px; /* Space between icon and text */
+}
+
+nav ul li a:hover {
+  background-color: #34495e;
+}
+
+nav ul li a.active {
+  background-color: #2c62d6;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px; /* Matches sidebar width */
+  overflow-y: auto;
+  background-color: #f4f4f9;
+}
+
+/* Account management section */
+.account-management {
+  background-color: #fff;
+  padding-left: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 82%;
+  margin-top: 20px;
+  margin-left: 260px;
+  min-height: calc(100vh - 40px);
+}
+
+/* Table styling */
+.account-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.account-table th,
+.account-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.account-table th {
+  background-color: #f5f7fa;
+  color: #555;
+  font-weight: bold;
+}
+
+.account-table td {
+  color: #555;
+}
+
+.account-table tr:hover {
+  background-color: #f9fafc;
+}
+
+/* Action buttons styling */
+.btn {
+  border: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn i {
+  font-size: 16px;
+}
+
+.btn.view {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.btn.edit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn.view:hover {
+  background-color: #138496;
+}
+
+.btn.edit:hover {
+  background-color: #0056b3;
+}
+
+.btn.delete:hover {
+  background-color: #c82333;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+}
+
+/* Filters and actions section */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filters select,
+.filters input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Create button styling */
+.create-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Scrollbar Styling for Sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #2c62d6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Reduce sidebar width on smaller screens */
+  }
+
+  .main-content {
+    margin-left: 200px; /* Match reduced sidebar width */
+    padding: 15px;
+  }
+
+  .stat p {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+}
+
+.account-management {
+  position: relative;
+}
+
+.breadcrumb {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

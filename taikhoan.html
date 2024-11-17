@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <link rel="stylesheet" href="./src/taikhoan.css" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="user-info">
+        <img
+          src="./public/profile.jpeg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <h3>Võ Thị Thái Ngọc</h3>
+        <p>vothithaingoc207@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i class="bx bx-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="dashboard.html"
+              ><i class="bx bx-grid-alt"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="section-title">Quản lý</li>
+          <li>
+            <a href="taikhoan.html" class="active"
+              ><i class="bx bx-user"></i> Tài khoản</a
+            >
+          </li>
+          <li>
+            <a href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
+          </li>
+          <li>
+            <a href="danh-muc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <a href="san-pham.html"><i class="bx bx-book"></i> Sản phẩm</a>
+          </li>
+          <li>
+            <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
+          </li>
+          <li>
+            <a href="lien-he.html"><i class="bx bx-phone"></i> Liên hệ</a>
+          </li>
+
+          <li class="section-title">Hệ thống</li>
+          <li>
+            <a href="ho-so.html"
+              ><i class="bx bx-user-circle"></i> Hồ sơ cá nhân</a
+            >
+          </li>
+          <li>
+            <a href="doi-mat-khau.html"
+              ><i class="bx bx-key"></i> Đổi mật khẩu</a
+            >
+          </li>
+          <li>
+            <a href="dang-xuat.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="account-management">
+      <header>
+        <h2>Quản lý tài khoản</h2>
+        <div class="breadcrumb">
+          <span>Dashboard</span> / <span>Quản lý tài khoản</span>
+        </div>
+      </header>
+
+      <div class="actions">
+        <div class="filters">
+          <label for="user-type">Hiển thị:</label>
+          <select id="user-type">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+          <input type="text" placeholder="Tìm kiếm..." id="search" />
+        </div>
+        <button class="create-btn">+ Tạo mới</button>
+      </div>
+
+      <table class="account-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ và tên</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Loại tài khoản</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Võ Thị Thái Ngọc</td>
+            <td>vothithaingoc207@gmail.com</td>
+            <td>0935346126</td>
+            <td>Admin</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Trần Văn Phúc Duy</td>
+            <td>phucduy2501@gmail.com</td>
+            <td>0896234032</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nguyễn Hoàng Nam</td>
+            <td>hoangnam0101@gmail.com</td>
+            <td>0812334032</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Châu Thị Vũ</td>
+            <td>chauthivu123@gmail.com</td>
+            <td>0978659888</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Trần Anh Tài</td>
+            <td>facebookketbangiaoluu@gmail.com</td>
+            <td>0935980348</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Đặng Anh Dũng</td>
+            <td>dangtuan2012tj@gmail.com</td>
+            <td>0986445724</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Nguyễn Thị Nga</td>
+            <td>nguyennga123@gmail.com</td>
+            <td>0345801234</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Nguyễn Văn Ánh</td>
+            <td>nguyenanh1993@gmail.com</td>
+            <td>0398765234</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Đào Nguyên Tuấn</td>
+            <td>tuandao765@gmail.com</td>
+            <td>0998775232</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Trần Thị Thu Min</td>
+            <td>ttthumin2005@gmail.com</td>
+            <td>0888875232</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Phan Văn Thành</td>
+            <td>thanhphan20783@gmail.com</td>
+            <td>0988820783</td>
+            <td>Khách hàng</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="page-btn"><<</button>
+        <button class="page-btn">1</button>
+        <button class="page-btn">>></button>
+      </div>
+    </div>
+  </body>
+</html>

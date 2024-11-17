@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/donhang.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="user-info">
+        <img
+          src="./public/profile.jpeg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <h3>Võ Thị Thái Ngọc</h3>
+        <p>vothithaingoc207@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><i class="bx bx-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="bx bx-grid-alt"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="section-title">Quản lý</li>
+          <li>
+            <a href="./taikhoan.html"><i class="bx bx-user"></i> Tài khoản</a>
+          </li>
+          <li>
+            <a class="active" href="./donhang.html"
+              ><i class="bx bx-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="danh-muc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <a href="san-pham.html"><i class="bx bx-book"></i> Sản phẩm</a>
+          </li>
+          <li>
+            <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
+          </li>
+          <li>
+            <a href="lien-he.html"><i class="bx bx-phone"></i> Liên hệ</a>
+          </li>
+
+          <li class="section-title">Hệ thống</li>
+          <li>
+            <a href="ho-so.html"
+              ><i class="bx bx-user-circle"></i> Hồ sơ cá nhân</a
+            >
+          </li>
+          <li>
+            <a href="doi-mat-khau.html"
+              ><i class="bx bx-key"></i> Đổi mật khẩu</a
+            >
+          </li>
+          <li>
+            <a href="dang-xuat.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="account-management">
+      <header>
+        <h2>Quản lý tài khoản</h2>
+        <div class="breadcrumb">
+          <span>Dashboard</span> / <span>Quản lý tài khoản</span>
+        </div>
+      </header>
+
+      <div class="actions">
+        <div class="filters">
+          <label for="user-type">Hiển thị:</label>
+          <select id="user-type">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+          <select name="cars" id="cars">
+            <option value="volvo">Tất cả</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+          <input type="text" placeholder="Tìm kiếm..." id="search" />
+        </div>
+      </div>
+
+      <table class="account-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Mã đơn hàng</th>
+            <th>Họ và tên</th>
+            <th>Tổng đơn hàng</th>
+            <th>Hình thức mua</th>
+            <th>Ngày đặt hàng</th>
+            <th>Địa chỉ</th>
+            <th>Tỉnh trạng đơn hàng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>TVPD001</td>
+            <td>Võ Thị Thái Ngọc</td>
+            <td>3.400.000</td>
+            <td>Chuyển khoản</td>
+            <td>3:14 - 15/06/2024</td>
+            <td>Quảng Nam</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="volvo">Đang chờ xử lý</option>
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>TVPD002</td>
+            <td>Trần Văn Phúc Duy</td>
+            <td>8.386.000</td>
+            <td>Chuyển khoản</td>
+            <td>1:59 - 16/11/2024</td>
+            <td>Quảng Trị</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="saab">Đã hoàn thành</option>
+                <option value="volvo">Đang chờ xử lý</option>
+
+                <option value="opel">Đã huỷ</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>TVPD003</td>
+            <td>Nguyễn Hoàng Nam</td>
+            <td>5.600.000</td>
+            <td>Chuyển khoản</td>
+            <td>7:59 - 14/11/2024</td>
+            <td>Quảng Bình</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="volvo">Đang chờ xử lý</option>
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>TVPD004</td>
+            <td>Châu Thị Vũ</td>
+            <td>1.500.000</td>
+            <td>Chuyển khoản</td>
+            <td>6:00 - 11/11/2024</td>
+            <td>Thừa THiên Huế</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="volvo">Đang chờ xử lý</option>
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>TVPD005</td>
+            <td>Trần Anh Tài</td>
+            <td>10.500.000</td>
+            <td>Thanh Toán Nhận Hàng</td>
+            <td>8:00 - 5/11/2024</td>
+            <td>Gia Lai</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="opel">Đã huỷ</option>
+                <option value="volvo">Đang chờ xử lý</option>
+                <option value="saab">Đã hoàn thành</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>TVPD006</td>
+            <td>Đặng Anh Dũng</td>
+            <td>6.567.890</td>
+            <td>Chuyển khoản</td>
+            <td>10:10 - 13/11/2024</td>
+            <td>Phú Yên</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+                <option value="volvo">Đang chờ xử lý</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>TVPD007</td>
+            <td>Nguyễn Thị Nga</td>
+            <td>1.111.111</td>
+            <td>Thanh Toán Nhận Hàng</td>
+            <td>11:12 - 10/10/2024</td>
+            <td>Phú Yên</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+                <option value="volvo">Đang chờ xử lý</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>TVPD008</td>
+            <td>Nguyễn Văn Ánh</td>
+            <td>2.222.333</td>
+            <td>Chuyển khoản</td>
+            <td>9:59 - 9/10/2024</td>
+            <td>Phú Yên</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+                <option value="volvo">Đang chờ xử lý</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>TVPD009</td>
+            <td>Đào Nguyên Tuấn</td>
+            <td>3.333.333</td>
+            <td>Chuyển khoản</td>
+            <td>10:11 - 12/10/2024</td>
+            <td>Phú Yên</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="saab">Đã hoàn thành</option>
+                <option value="opel">Đã huỷ</option>
+                <option value="volvo">Đang chờ xử lý</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>TVPD010</td>
+            <td>Trần Thị Thu Min</td>
+            <td>5.553.333</td>
+            <td>Chuyển khoản</td>
+            <td>10:11 - 12/10/2024</td>
+            <td>Phú Yên</td>
+            <td class="thugon">
+              <select name="cars" id="Duy">
+                <option value="opel">Đã huỷ</option>
+                <option value="saab">Đã hoàn thành</option>
+
+                <option value="volvo">Đang chờ xử lý</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="page-btn"><<</button>
+        <button class="page-btn">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <button class="page-btn">>></button>
+      </div>
+    </div>
+  </body>
+</html>
