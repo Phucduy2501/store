@@ -289,6 +289,141 @@ nav ul li a.active {
   width: 400px;
 }
 
-.donhang__h2 {
+/* ---------------------------  */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1e1e2f; /* Màu sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+  position: relative; /* Để submenu nằm bên trong menu-item */
+}
+
+.menu-title {
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 15px;
+  margin: 0;
+  display: none; /* Ẩn submenu ban đầu */
+  position: absolute;
+  top: 25px; /* Đẩy submenu xuống dưới */
+  left: 0;
+  background-color: #2c2c3e; /* Màu nền submenu */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.submenu-item {
+  margin-bottom: 5px;
+}
+
+.submenu-item a {
+  width: 200px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.submenu-item a:hover {
+  color: #00aaff; /* Màu khi hover */
+}
+
+/* Hiện submenu khi hover vào menu-item */
+.menu-item:hover .submenu {
+  display: block;
+}
+
+/* ----------------------------- */
+.form-row {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các ô */
+  justify-content: space-between; /* Cân đều khoảng cách */
+  margin-bottom: 15px;
+}
+
+.form-row .form-group {
+  flex: 1; /* Đảm bảo các ô chia đều kích thước */
+}
+
+input[type="number"],
+select {
+  width: 100%; /* Đảm bảo các ô tự động căn chỉnh kích thước */
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-unit {
+  background-color: rgb(80, 76, 76);
+  margin-top: 10px;
+}
+.input-with-unit input {
+  padding: 10px;
+}
+
+.input-with-unit span {
+  padding: 0 10px;
+}
+
+#product-category {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#product-status {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.quantity {
+  margin-top: 10px;
+}
+
+#quantity {
+  padding: 10px;
+}
+
+#tensanpham {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.hinhanh {
+  margin-top: 10px;
+}
+
+.motangan .item {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.sanpham__h4 {
+  margin-top: 10px;
   margin-bottom: 10px;
 }

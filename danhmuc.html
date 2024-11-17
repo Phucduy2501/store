@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <link rel="stylesheet" href="./src/danhmuc.css" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/sanpham.css">
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="user-info">
+        <img
+          src="./public/profile.jpeg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <h3>Võ Thị Thái Ngọc</h3>
+        <p>vothithaingoc207@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><i class="bx bx-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="bx bx-grid-alt"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="section-title">Quản lý</li>
+          <li>
+            <a href="./taikhoan.html" 
+              ><i class="bx bx-user"></i> Tài khoản</a
+            >
+          </li>
+          <li>
+            <a href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
+          </li>
+          <li>
+            <a class="active" href="./danhmuc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <ul class="menu">
+                <li class="menu-item">
+                    <span class="menu-title">📖 Sản phẩm</span>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
+                        <li class="submenu-item"><a href="danh-sach.html">Danh sách</a></li>
+                    </ul>
+                </li>
+          </li>
+          <li>
+            <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
+          </li>
+          <li>
+            <a href="lien-he.html"><i class="bx bx-phone"></i> Liên hệ</a>
+          </li>
+
+          <li class="section-title">Hệ thống</li>
+          <li>
+            <a href="ho-so.html"
+              ><i class="bx bx-user-circle"></i> Hồ sơ cá nhân</a
+            >
+          </li>
+          <li>
+            <a href="doi-mat-khau.html"
+              ><i class="bx bx-key"></i> Đổi mật khẩu</a
+            >
+          </li>
+          <li>
+            <a href="dang-xuat.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="account-management">
+      <header>
+        <h2 class="danhmuc__h2">Danh mục</h2>
+        <div class="breadcrumb">
+          <span>Dashboard</span> / <span>Quản lý tài khoản</span>
+        </div>
+      </header>
+
+      <div class="actions">
+        <div class="filters">
+          <label for="user-type">Hiển thị:</label>
+          <select id="user-type">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+          <input type="text" placeholder="Tìm kiếm..." id="search" />
+        </div>
+        <button class="create-btn">+ Tạo mới</button>
+      </div>
+
+      <table class="account-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Tên danh mục</th>
+            <th>Ngày tạo</th>
+            <th>Ngày cập nhật</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <img
+                style="width: 70px; height: 70px"
+                src="./public/danhmuc/ao-so-mi-nam-bycotton-trang-art-nhan_8ec622a241ea4deb93a02bdbdcb87954.webp"
+                alt="áo sơ mi"
+              />
+            </td>
+            <td>Áo sơ mi</td>
+            <td>28/10/2024</td>
+            <td></td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img
+                style="width: 70px; height: 70px"
+                src="./public/danhmuc/den-_60b5cd0a91a14002909271217393f7eb.webp"
+                alt="áo thun"
+              />
+            </td>
+            <td>Áo thun Paradox</td>
+            <td>10/10/2024</td>
+            <td>15/10/2024</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img
+                style="width: 70px; height: 70px"
+                src="./public/danhmuc/mc1-0224920e-c953-4129-a4b3-d79b600e15fa.webp"
+                alt="Áo Thun Teelab"
+              />
+            </td>
+            <td>Áo Thun Teelab</td>
+            <td>11/11/2024</td>
+            <td>20/11/2024</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>
+              <img
+                style="width: 70px; height: 70px"
+                src="./public/danhmuc/Quan-Baggy-Jean-nam-nu-2b-1-Quan-ong-rong-xanh-classic-ZiZoou-Store_4472x.webp"
+                alt="Quan Baggy Jean"
+              />
+            </td>
+            <td>Quần-Baggy-Jean(nam/nữ)</td>
+            <td>25/10/2024</td>
+            <td>30/102024</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i></button>
+              <button class="btn edit"><i class="bx bx-edit"></i></button>
+              <button class="btn delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="page-btn"><<</button>
+        <button class="page-btn">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <button class="page-btn">>></button>
+      </div>
+    </div>
+  </body>
+</html>

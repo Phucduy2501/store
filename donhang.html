@@ -15,6 +15,7 @@
     />
 
     <link rel="stylesheet" href="./src/donhang.css" />
+    <link rel="stylesheet" href="./src/sanpham.css">
   </head>
   <body>
     <div class="sidebar">
@@ -40,18 +41,25 @@
 
           <li class="section-title">Quản lý</li>
           <li>
-            <a href="./taikhoan.html"><i class="bx bx-user"></i> Tài khoản</a>
-          </li>
-          <li>
-            <a class="active" href="./donhang.html"
-              ><i class="bx bx-cart"></i> Đơn hàng</a
+            <a href="./taikhoan.html" 
+              ><i class="bx bx-user"></i> Tài khoản</a
             >
           </li>
           <li>
-            <a href="danh-muc.html"><i class="bx bx-category"></i> Danh mục</a>
+            <a class="active" href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
           </li>
           <li>
-            <a href="san-pham.html"><i class="bx bx-book"></i> Sản phẩm</a>
+            <a href="./danhmuc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <ul class="menu">
+                <li class="menu-item">
+                    <span class="menu-title">📖 Sản phẩm</span>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
+                        <li class="submenu-item"><a href="danh-sach.html">Danh sách</a></li>
+                    </ul>
+                </li>
           </li>
           <li>
             <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
@@ -79,9 +87,9 @@
     </div>
     <div class="account-management">
       <header>
-        <h2>Quản lý tài khoản</h2>
+        <h2 class="donhang__h2">Đơn hàng</h2>
         <div class="breadcrumb">
-          <span>Dashboard</span> / <span>Quản lý tài khoản</span>
+          <span>Dashboard</span> / <span>Đơn hàng</span>
         </div>
       </header>
 
