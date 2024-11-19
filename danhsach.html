@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <link rel="stylesheet" href="./src/taikhoan.css" />
+    <link rel="stylesheet" href="./src/danhsach.css">
+
+    <link rel="stylesheet" href="./src/sanpham.css" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+        <div class="user-info">
+          <img
+            src="./public/profile.jpeg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <h3>Võ Thị Thái Ngọc</h3>
+          <p>vothithaingoc207@gmail.com</p>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"><i class="bx bx-home"></i> Trang chủ</a>
+            </li>
+            <li>
+              <a href="dashboard.html"
+                ><i class="bx bx-grid-alt"></i> Dashboard</a
+              >
+            </li>
+  
+            <li class="section-title">Quản lý</li>
+            <li>
+              <a href="taikhoan.html" 
+                ><i class="bx bx-user"></i> Tài khoản</a
+              >
+            </li>
+            <li>
+              <a href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
+            </li>
+            <li>
+              <a href="./danhmuc.html"><i class="bx bx-category"></i> Danh mục</a>
+            </li>
+            <li>
+              <ul class="active" class="menu">
+                  <li class="menu-item">
+                      <span  class="menu-title">📖 Sản phẩm</span>
+                      <ul class="submenu">
+                          <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
+                          <li class="submenu-item"><a href="danh-sach.html">Danh sách</a></li>
+                      </ul>
+                  </li>
+            </li>
+            <li>
+              <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
+            </li>
+            <li>
+              <a href="lien-he.html"><i class="bx bx-phone"></i> Liên hệ</a>
+            </li>
+  
+            <li class="section-title">Hệ thống</li>
+            <li>
+              <a href="ho-so.html"
+                ><i class="bx bx-user-circle"></i> Hồ sơ cá nhân</a
+              >
+            </li>
+            <li>
+              <a href="doi-mat-khau.html"
+                ><i class="bx bx-key"></i> Đổi mật khẩu</a
+              >
+            </li>
+            <li>
+              <a href="dang-xuat.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    <div class="account-management">
+      <header>
+        <h2>Quản lý tài khoản</h2>
+        <div class="breadcrumb">
+          <span>Dashboard</span> / <span>Quản lý tài khoản</span>
+        </div>
+      </header>
+
+      <div class="actions">
+        <div class="filters">
+          <label for="user-type">Danh mục sản phẩm</label>
+        </div>
+      </div>
+
+      <table class="account-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Danh mục</th>
+            <th>Giá nhập</th>
+            <th>Giá bán</th>
+            <th>Giá giảm</th>
+            <th>số lượng nhập</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

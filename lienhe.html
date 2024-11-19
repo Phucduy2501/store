@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <link rel="stylesheet" href="./src/sanpham.css" />
+    <link rel="stylesheet" href="./src/lienhe.css">
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CKEditor 5 -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="user-info">
+        <img
+          src="./public/profile.jpeg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <h3>Võ Thị Thái Ngọc</h3>
+        <p>vothithaingoc207@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i class="bx bx-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="dashboard.html"
+              ><i class="bx bx-grid-alt"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="section-title">Quản lý</li>
+          <li>
+            <a href="taikhoan.html" 
+              ><i class="bx bx-user"></i> Tài khoản</a
+            >
+          </li>
+          <li>
+            <a href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
+          </li>
+          <li>
+            <a href="./danhmuc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <ul class="active" class="menu">
+                <li class="menu-item">
+                    <span  class="menu-title">📖 Sản phẩm</span>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
+                        <li class="submenu-item"><a href="./danhsach.html">Danh sách</a></li>
+                    </ul>
+                </li>
+          </li>
+          <li>
+            <a href="bai-viet.html"><i class="bx bx-news"></i> Bài viết</a>
+          </li>
+          <li>
+            <a href="./lienhe.html"><i class="bx bx-phone"></i> Liên hệ</a>
+          </li>
+
+          <li class="section-title">Hệ thống</li>
+          <li>
+            <a href="ho-so.html"
+              ><i class="bx bx-user-circle"></i> Hồ sơ cá nhân</a
+            >
+          </li>
+          <li>
+            <a href="doi-mat-khau.html"
+              ><i class="bx bx-key"></i> Đổi mật khẩu</a
+            >
+          </li>
+          <li>
+            <a href="dang-xuat.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="carousel">
+        <div class="carousel__lf">
+            <h1>Kết nối ngay với chúng tôi</h1>
+            <input type="text" placeholder="Tên của bạn">
+            <input type="text" placeholder="Số điện thoại của bạn">
+            <input type="text" placeholder="Email của bạn">
+            <div class="carousel__bl">
+
+                <textarea name="Viet-binh-luan" id="vietbinhluan" placeholder="Viết bình luận"></textarea>
+                <button class="btn">Gửi thông tin</button>
+            </div>
+        </div>
+        <div class="carousel__rt">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15678.472062363246!2d106.656318!3d10.763894!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eec7a06c0ad%3A0x5cb6cda1f5e5e5ef!2zMTgyIMSQLiBMw6ogxJDhuqFpIEjDoG5oLCBQaMaw4budbmcgMTUsIFF14bqtbiAxMSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1732008621073!5m2!1svi!2sus" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+  </body>
+</html>
