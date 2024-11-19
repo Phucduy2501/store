@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Delivery Dashboard</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/sanpham.css">
+    <link rel="stylesheet" href="./src/trinhduyet.css">
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="user-info">
+        <img
+          src="./public/profile.jpeg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <h3>Võ Thị Thái Ngọc</h3>
+        <p>vothithaingoc207@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="./index.html"><i class="bx bx-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="bx bx-grid-alt"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="section-title">Quản lý</li>
+          <li>
+            <a href="./taikhoan.html" 
+              ><i class="bx bx-user"></i> Tài khoản</a
+            >
+          </li>
+          <li>
+            <a href="./donhang.html"><i class="bx bx-cart"></i> Đơn hàng</a>
+          </li>
+          <li>
+            <a href="./danhmuc.html"><i class="bx bx-category"></i> Danh mục</a>
+          </li>
+          <li>
+            <ul class="menu">
+                <li class="menu-item">
+                    <span class="menu-title">📖 Sản phẩm</span>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
+                        <li class="submenu-item"><a href="danh-sach.html">Danh sách</a></li>
+                    </ul>
+                </li>
+          </li>
+          <li>
+            <a href="./lienhe.html"><i class="bx bx-phone"></i> Liên hệ</a>
+          </li>
+
+          <li class="section-title">Hệ thống</li>
+          <li>
+            <a href="./trinhduyet.html"
+              ><i class="bx bx-user-circle"></i>Trình duyệt hệ thống</a
+            >
+          </li>
+          <li>
+            <a href="./doipass.html"
+              ><i class="bx bx-key"></i> Đổi mật khẩu</a
+            >
+          </li>
+          <li>
+            <a href="./dangnhapnhom/index.html"><i class="bx bx-log-out"></i> Đăng xuất</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="carousel">
+        <h1>Hello</h1>
+    </div>
+
+    
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // Khởi tạo Flatpickr để chọn năm
+      flatpickr("#yearPicker", {
+        dateFormat: "Y", // Year format only
+        defaultDate: new Date(), // Default to the current year
+      });
+
+      // Handle year selection
+      document.getElementById("yearPicker").addEventListener("change", (e) => {
+        const selectedYear = e.target.value;
+        console.log("Selected Year:", selectedYear);
+        // Update the chart or data as needed based on selected year
+      });
+
+      // Initialize Chart.js
+      const ctx = document
+        .getElementById("revenueOrdersChart")
+        .getContext("2d");
+      const revenueOrdersChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Tháng 1",
+            "Tháng 2",
+            "Tháng 3",
+            "Tháng 4",
+            "Tháng 5",
+            "Tháng 6",
+            "Tháng 7",
+            "Tháng 8",
+            "Tháng 9",
+            "Tháng 10",
+            "Tháng 11",
+            "Tháng 12",
+          ],
+          datasets: [
+            {
+              label: "Tổng doanh thu (triệu VND)",
+              data: [
+                2.9, 7.3, 49.29, 17.8, 4.56, 4.56, 15, 23, 33, 5.11, 10, 0,
+              ],
+              backgroundColor: "rgba(255, 99, 132, 0.6)",
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              yAxisID: "y1",
+            },
+            {
+              label: "Tổng số lượng đơn hàng",
+              data: [3, 10, 10, 6, 7, 4, 13, 19, 3, 5, 19, 0],
+              type: "line",
+              backgroundColor: "rgba(54, 162, 235, 0.6)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 2,
+              yAxisID: "y2",
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y1: {
+              type: "linear",
+              position: "left",
+              title: {
+                display: true,
+                text: "Doanh thu (Triệu VND)",
+              },
+            },
+            y2: {
+              type: "linear",
+              position: "right",
+              title: {
+                display: true,
+                text: "Số lượng đơn hàng",
+              },
+              grid: {
+                drawOnChartArea: false,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

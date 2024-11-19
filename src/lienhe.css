@@ -5,7 +5,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 82%;
-  margin-top: 20px;
   margin-left: 260px;
   min-height: calc(100vh - 40px);
 }
@@ -56,4 +55,21 @@
 
 .carousel__rt iframe {
   border-radius: 10px;
+}
+
+.carousel__bt {
+  background-color: #fff;
+  padding-left: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 82%;
+  /* margin-top: 20px; */
+  margin-left: 260px;
+  min-height: calc(100vh - 40px);
+}
+
+.carousel__bt button {
+  width: 20%;
+  height: 20%;
 }
