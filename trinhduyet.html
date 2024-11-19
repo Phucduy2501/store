@@ -16,6 +16,9 @@
     />
     <link rel="stylesheet" href="./src/sanpham.css">
     <link rel="stylesheet" href="./src/trinhduyet.css">
+
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> <!-- QR code library -->
   </head>
   <body>
     <div class="sidebar">
@@ -82,19 +85,18 @@
         </ul>
       </nav>
     </div>
-
     <div class="carousel">
-        <h1>Hello</h1>
+        <select name="cars" id="cars">
+            <option value="volvo">Chọn hình thức</option>
+            <option value="saab">Ví điện tử</option>
+            <option value="opel">Thẻ tín dụng</option>
+            <option value="audi">Chuyển khoản</option>
+        </select>
+        <input type="number" id="amount" placeholder="Nhập số tiền">
+        <button class="btn" onclick="generateQRCode()">TẠO MÃ QR</button>
+        <div id="qrcode" style="margin-top: 20px;"></div>
     </div>
-
     
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
@@ -187,5 +189,7 @@
         },
       });
     </script>
+
+    <script src="./src/js/trinhduyet.js"></script>
   </body>
 </html>
