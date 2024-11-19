@@ -32,7 +32,7 @@
       <nav>
         <ul>
           <li>
-            <a class="active" href="./index.html"><i class="bx bx-home"></i> Trang chủ</a>
+            <a  href="./index.html"><i class="bx bx-home"></i> Trang chủ</a>
           </li>
           <li>
             <a href="./dashboard.html"
@@ -58,7 +58,7 @@
                     <span class="menu-title">📖 Sản phẩm</span>
                     <ul class="submenu">
                         <li class="submenu-item"><a href="./sanpham.html">Tạo mới</a></li>
-                        <li class="submenu-item"><a href="./danhsach.html">Danh sách</a></li>
+                        <li class="submenu-item active"><a href="./danhsach.html">Danh sách</a></li>
                     </ul>
                 </li>
           </li>
@@ -93,7 +93,7 @@
 
       <div class="actions">
         <div class="filters">
-          <label for="user-type">Danh mục sản phẩm</label>
+          <label for="user-type">Danh sách sản phẩm</label>
         </div>
       </div>
 
@@ -107,12 +107,84 @@
             <th>Giá nhập</th>
             <th>Giá bán</th>
             <th>Giá giảm</th>
-            <th>số lượng nhập</th>
+            <th>Số lượng nhập</th>
             <th>Thao tác</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="product-list">
+          <tr data-product-id="1">
+            <td>1</td>
+            <td><img style="width: 70px; height: 70px" src="./public/danhmuc/ao-so-mi-nam-bycotton-trang-art-nhan_8ec622a241ea4deb93a02bdbdcb87954.webp" alt="áo sơ mi" /></td>
+            <td>Áo sơ mi</td>
+            <td>Áo</td>
+            <td>70000</td>
+            <td>110000</td>
+            <td>10000</td>
+            <td>1000</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i> Xem</button>
+              <button class="btn edit"><i class="bx bx-edit"></i> Chỉnh sửa</button>
+              <button class="btn delete"><i class="bx bx-trash"></i> Xoá</button>
+            </td>
+          </tr>
+          <tr data-product-id="2">
+            <td>2</td>
+            <td><img style="width: 70px; height: 70px" src="./public/danhmuc/den-_60b5cd0a91a14002909271217393f7eb.webp" alt="áo thun" /></td>
+            <td>Áo thun Paradox</td>
+            <td>Áo</td>
+            <td>100000</td>
+            <td>150000</td>
+            <td>15000</td>
+            <td>600</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i> Xem</button>
+              <button class="btn edit"><i class="bx bx-edit"></i> Chỉnh sửa</button>
+              <button class="btn delete"><i class="bx bx-trash"></i> Xoá</button>
+            </td>
+          </tr>
+          <tr data-product-id="3">
+            <td>3</td>
+            <td><img style="width: 70px; height: 70px" src="./public/danhmuc/mc1-0224920e-c953-4129-a4b3-d79b600e15fa.webp" alt="Áo Thun Teelab" /></td>
+            <td>Áo Thun Teelab</td>
+            <td>Áo</td>
+            <td>50000</td>
+            <td>80000</td>
+            <td>5000</td>
+            <td>2000</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i> Xem</button>
+              <button class="btn edit"><i class="bx bx-edit"></i> Chỉnh sửa</button>
+              <button class="btn delete"><i class="bx bx-trash"></i> Xoá</button>
+            </td>
+          </tr>
+          <tr data-product-id="4">
+            <td>4</td>
+            <td><img style="width: 70px; height: 70px" src="./public/danhmuc/Quan-Baggy-Jean-nam-nu-2b-1-Quan-ong-rong-xanh-classic-ZiZoou-Store_4472x.webp" alt="Quần Baggy Jean" /></td>
+            <td>Quần-Baggy-Jean(nam/nữ)</td>
+            <td>Quần</td>
+            <td>200000</td>
+            <td>250000</td>
+            <td>20000</td>
+            <td>3000</td>
+            <td>
+              <button class="btn view"><i class="bx bx-show"></i> Xem</button>
+              <button class="btn edit"><i class="bx bx-edit"></i> Chỉnh sửa</button>
+              <button class="btn delete"><i class="bx bx-trash"></i> Xoá</button>
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <div class="pagination">
+        <button class="page-btn"><<</button>
+        <button class="page-btn">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <button class="page-btn">>></button>
+      </div>
     </div>
+
+    <script src="./src/js/danhsach.js"></script>
   </body>
 </html>
